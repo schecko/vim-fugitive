@@ -4562,8 +4562,8 @@ function! fugitive#Statusline(...) abort
   if len(commit)
     let status .= ':' . commit[0:6]
   endif
-  let status .= '('.FugitiveHead(7).')'
-  return '[Git'.status.']'
+  let status .= FugitiveHead(7)
+  return status
 endfunction
 
 function! fugitive#statusline(...) abort
